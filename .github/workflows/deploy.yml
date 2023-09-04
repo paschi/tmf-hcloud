@@ -1,0 +1,52 @@
+name: Deploy Environment
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment to deploy"
+        type: environment
+        required: true
+        default: production
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm clean-install
+
+      - name: Deploy ${{ inputs.environment }} stack
+        uses: pulumi/actions@v4
+        id: deployment
+        with:
+          command: up
+          stack-name: ${{ inputs.environment }}
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
+
+      - name: Send Discord notification 
+        uses: Ilshidur/action-discord@master
+        with:
+          args: |
+            **TrackMania** server is **up & running**. :race_car:
+            To connect, go to __Play Online__ > __Favorites__ and join:
+            * Server: `${{ steps.deployment.outputs.serverName }}`
+            * Password: `${{ steps.deployment.outputs.password }}`
+            If the server is not listed there, go to __Explorer__ and add it via the address bar:
+            ```
+            tmtp://#addfavourite=${{ steps.deployment.outputs.serverUser }}
+            ```
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
