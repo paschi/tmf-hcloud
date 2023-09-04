@@ -1,0 +1,27 @@
+config:
+  tmf-hcloud:database:
+    database: trackmania
+    password:
+      secure: AAABAFD7UQIVEJXViPteow6n5yCpWlWGx5rHDukN8WjaIzJxKh7OQivT7xQobA==
+    rootPassword:
+      secure: AAABAPek9z09GS9D5+GZ+QOgD+td/buCBBRxaxKxB1hUbf1kgEjJKMic5AEsC4p7
+    username: trackmania
+  tmf-hcloud:game:
+    adminPassword:
+      secure: AAABAEyZvK3tDbPgfPAUYCyoQxyU5E9HQJy4Tyb5BjQMymDRD6V9Ew2HQBoKYJoc
+    loginPassword:
+      secure: AAABAKgLfAkhubGS6u5suFiZldFU9Gq5Qj8vYB5TDziL1K0aPv0oeg==
+    loginUser:
+      secure: AAABAMIhqfZvavD3FeJEueFjYLjmt470tt4b+tKIr6hcNSfm/baQFHXxT6Vc
+    masterAdmin:
+      secure: AAABAPAAT0sH8kJNhHV//id/+JewALq5SwgVpnvbwhO/KHuZns+o
+    maxPlayers: 4
+    name: Paschis Testlabor
+    password:
+      secure: AAABAAtg1TzwDjiFi6gO0sULAJJjBCfo1YCr8khJaDkEpwYNeKA5muFG9kc=
+    pluginBlacklist:
+      - jfreu.chat.php
+      - jfreu.lite.php
+      - jfreu.plugin.php
+    superAdminPassword:
+      secure: AAABAPQG+r4kIOgXqb6mQOHwrsQBT2+YqYR4ul8FbwggIWD1J9ijhLpyRCiVGih1

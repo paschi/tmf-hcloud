@@ -1,0 +1,28 @@
+config:
+  tmf-hcloud:database:
+    database: trackmania
+    password:
+      secure: AAABAFY4tNk2KIbig4I6mjFiahpUH9+cNxsDEuVTHI/iYHQMzsQpmzc2crnBqT/o
+    rootPassword:
+      secure: AAABABBCCYGHyS5MCrILI4k4FRCGFplxCfOZqewgn1TYt4F1FwofX8np2ON/w2PN
+    username: trackmania
+  tmf-hcloud:game:
+    adminPassword:
+      secure: AAABAMPh2ot1YJnmcZ0gPTldQtJe0Liwpi3Az1yRpre0TRtw1tqES4nzgwsQbiP6
+    description: To finish first, you must first finish.
+    loginPassword:
+      secure: AAABAE2oMmy1JKl5klt7wL4+UEyXq4FroRQLExBN3Ys5KLtKtyuYPQ==
+    loginUser:
+      secure: AAABAN0KqhZmWLAOF8cIzP+S+7f8wBJEXN1Cqf0z2lk7vt23vTSW3th9JAjw
+    masterAdmin:
+      secure: AAABADCjb5SWoG8LRo0X0ssZkpe/b7aQ+HBXYm+O3jLyJPbK3G3i
+    maxPlayers: 24
+    name: Spezi Zockertreff
+    password:
+      secure: AAABAD3dzP7dB29fU/px8pfuibrcCBOkNEZA3/BQsmqLHJ0TJJVcHcAYTQ==
+    pluginBlacklist:
+      - jfreu.chat.php
+      - jfreu.lite.php
+      - jfreu.plugin.php
+    superAdminPassword:
+      secure: AAABANgpCo84D9fM2UlBFOHbWlkcbESI6U57D5HiZKoABU05F+V/XVIRuRu7l5jO

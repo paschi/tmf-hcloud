@@ -1,0 +1,8 @@
+name: tmf-hcloud
+runtime: nodejs
+description: TrackMania Forever server on Hetzner Cloud
+config:
+  server:
+    value:
+      type: cx21
+      location: fsn1
